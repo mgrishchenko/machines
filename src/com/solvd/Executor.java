@@ -1,6 +1,4 @@
 package com.solvd;
-import com.solvd.inteface.Auto;
-import com.solvd.inteface.Driver;
 import com.solvd.body.Cabriolet;
 import com.solvd.body.Coupe;
 import com.solvd.body.Minivan;
@@ -58,14 +56,6 @@ public class Executor {
         int MazdaYear = Mazda.getYear();
         System.out.println("year: " +MazdaYear);
 
-        Auto auto1 = new Auto("Lamborghini");
-        Driver driver1 = new Driver("Jack");
-        auto1.makeNoise();
-        driver1.drive();
-        auto1.showInformation();
-        driver1.showInformation();
-
-	// write your code here
 
     }
 }
