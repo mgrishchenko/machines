@@ -1,6 +1,11 @@
 package com.solvd.types;
 
-public class Passenger {
+public class Passenger implements Information {
+    public int year;
+    public void transportation(){
+        System.out.println("People transportation");
+    }
+
     private String name;
     private int age;
     private String type;
@@ -11,7 +16,8 @@ public class Passenger {
         this.type = type;
     }
 
-    public Passenger() {
+    public Passenger(int year) {
+        this.year = year;
 
     }
 
@@ -34,6 +40,11 @@ public class Passenger {
         this.type = type;
     }
 
+    @Override
+    public void showInformation() {
+        System.out.println("Year is "+this.year);
+
+    }
 }
 
 

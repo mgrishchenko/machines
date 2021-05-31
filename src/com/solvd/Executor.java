@@ -10,12 +10,19 @@ public class Executor {
 
     public static void main(String[] args) {
         Passenger car  = new Passenger("Volkswagen", 30, "Polo");;
+        Passenger car1 = new Passenger(2005);
+        car1.transportation();
+        car1.showInformation();
+
         String carName = car.getName();
         int carAge = car.getAge();
         String carType = car.getType();
         System.out.println("name: " +carName + " age- "+carAge + " type-" +carType);
 
-        Sport auto = new Sport(250);
+        Sport auto = new Sport("Ferrari");
+        auto.driveFast();
+        auto.showInformation();
+
         int autoSpeed = auto.getSpeed();
         System.out.println("speed:" +autoSpeed);
 

@@ -1,20 +1,36 @@
 package com.solvd.types;
 
-public class Sport {
-    protected int speed;
+public class Sport implements Information {
+    public String name;
+
+    public Sport() {
+    }
+
+    public void driveFast(){
+        System.out.println("High speed movement");
+    }
+
+    private int speed;
 
     public Sport(int speed){
-        this.speed = 250;
+        this.speed = speed;
     }
     public int getSpeed(){
         return speed;
     }
     public void setSpeed(){
-        this.speed= 250;
+        this.speed = speed;
     }
-        public Sport(){
+        public Sport(String name){
+        this.name = name;
 
         }
+
+    @Override
+    public void showInformation() {
+        System.out.println("Name is "+this.name);
+
+    }
 }
 
 
