@@ -9,7 +9,7 @@ import com.solvd.types.Sport;
 public class Executor {
 
     public static void main(String[] args) {
-        Passenger car  = new Passenger("Volkswagen", 30, "Polo");;
+        Passenger car  = new Passenger("Volkswagen", 30, "Polo");
         Passenger car1 = new Passenger(2005);
         car1.transportation();
         car1.showInformation();
