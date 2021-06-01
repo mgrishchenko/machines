@@ -38,11 +38,16 @@ public class Passenger implements Information {
     }
     public void setType(){
         this.type = type;
+
     }
 
     @Override
-    public void showInformation() {
-        System.out.println("Year is "+this.year);
+    public void printInfo() {
+
+    }
+
+    @Override
+    public void ride() {
 
     }
 }

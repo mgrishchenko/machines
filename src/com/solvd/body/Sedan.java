@@ -21,5 +21,10 @@ public class Sedan extends Carbody {
         System.out.println("Speed riding");
 
     }
+
+    @Override
+    public void printInfo() {
+
+    }
 }
 

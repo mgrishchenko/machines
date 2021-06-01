@@ -1,7 +1,12 @@
 package com.solvd.body;
 
-public abstract class Carbody {
+import com.solvd.types.Information;
+
+public abstract class Carbody implements Information {
+
     public void ride(){
         System.out.println();
+
     }
+
 }
