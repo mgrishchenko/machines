@@ -26,12 +26,18 @@ public class Sport implements Information {
 
         }
 
+
     @Override
-    public void showInformation() {
-        System.out.println("Name is "+this.name);
+    public void printInfo() {
+
+    }
+
+    @Override
+    public void ride() {
 
     }
 }
+
 
 
 

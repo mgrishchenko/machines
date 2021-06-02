@@ -44,7 +44,13 @@ public class Cabriolet extends Carbody {
 
     @Override
     public void ride() {
-        System.out.println("Cabriolet - Open roof");
+        System.out.println("Car with open roof");
+    }
+
+
+    @Override
+    public void printInfo() {
+
     }
 }
 

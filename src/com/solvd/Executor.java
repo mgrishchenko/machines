@@ -1,39 +1,36 @@
 package com.solvd;
-import com.solvd.body.Cabriolet;
-import com.solvd.body.Coupe;
-import com.solvd.body.Minivan;
-import com.solvd.body.Sedan;
-import com.solvd.types.Passenger;
-import com.solvd.types.Sport;
+import com.solvd.body.*;
+import com.solvd.types.*;
+import com.solvd.types.drivers.DriversList;
+import com.solvd.types.drivers.Experienced;
+import com.solvd.types.drivers.Inexperienced;
 
 public class Executor {
 
     public static void main(String[] args) {
-        Passenger car  = new Passenger("Volkswagen", 30, "Polo");
+        Passenger car = new Passenger("Volkswagen", 30, "Polo");
         Passenger car1 = new Passenger(2005);
         car1.transportation();
-        car1.showInformation();
+        car1.printInfo();
 
         String carName = car.getName();
         int carAge = car.getAge();
         String carType = car.getType();
-        System.out.println("name: " +carName + " age- "+carAge + " type-" +carType);
+        System.out.println("name: " + carName + " age- " + carAge + " type-" + carType);
 
         Sport auto = new Sport("Ferrari");
         auto.driveFast();
-        auto.showInformation();
+        auto.printInfo();
 
         int autoSpeed = auto.getSpeed();
-        System.out.println("speed:" +autoSpeed);
+        System.out.println("speed:" + autoSpeed);
 
-        Cabriolet cabriolet1 = new Cabriolet();
-        cabriolet1.ride();
         Cabriolet Chevrolet = new Cabriolet(250, "Chevrolet", "New York");
         String ChevroletName = Chevrolet.getName();
         int ChevroletSpeed = Chevrolet.getSpeed();
         String ChevroletCity = Chevrolet.getCity();
 
-        System.out.println("Car name: " +ChevroletName);
+        System.out.println("Car name: " + ChevroletName);
         System.out.println("Car speed: " + ChevroletSpeed);
         System.out.println("Car city: " + ChevroletCity);
 
@@ -42,27 +39,46 @@ public class Executor {
         Chevrolet.setName("Chevrolet Camaro");
         System.out.println("New car name -" + Chevrolet.getName());
 
-        Coupe coupe1 = new Coupe();
-        coupe1.ride();
-        Coupe Honda = new Coupe(200, "Honda");
-        String HondaBrand = Honda.getBrand();
-        int HondaSpeed = Honda.getSpeed();
-
-        System.out.println("car: " +HondaBrand);
-        System.out.println("speed: " +HondaSpeed);
-
-        Minivan mini1 = new Minivan();
-        mini1.ride();
-        Minivan Toyota = new Minivan("Toyota");
-        String ToyotaBrand = Toyota.getBrand();
-        System.out.println("brand: " +ToyotaBrand);
-
         Sedan sedan1 = new Sedan();
         sedan1.ride();
         Sedan Mazda = new Sedan(2013);
         int MazdaYear = Mazda.getYear();
-        System.out.println("year: " +MazdaYear);
+        System.out.println("year: " + MazdaYear);
+
+        //Overloading and Override
+
+        Experienced man1 = new Experienced("John", "Smith", 17);
+        man1.printInfo();
+        Inexperienced man2 = new Inexperienced();
+        man2.printInfo("Or with minimum driving experience");
+        Cabriolet cabriolet1 = new Cabriolet();
+        cabriolet1.ride();
+
+        Sport superCar1 = new SuperCar();
+        Sport hyperCar = new HyperCar();
+
+        TestDrive testDrive = new TestDrive();
+        testDrive.testdrive(superCar1);
 
 
-    }
-}
+        }
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
