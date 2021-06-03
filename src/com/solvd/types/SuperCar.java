@@ -1,8 +1,19 @@
 package com.solvd.types;
 
-public class SuperCar extends Sport{
+public class SuperCar implements Sport {
+
+    String name = "Lamborghini";
+
+
     @Override
-    public void driveFast() {
-        System.out.println("The most speedy super car is Koenigsegg");
+    public void printInfo() {
+        System.out.println("This is Super Car!");
     }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
 }
+

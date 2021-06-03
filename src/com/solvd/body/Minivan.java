@@ -9,10 +9,6 @@ public class Minivan extends Carbody {
     public void ride() {
         System.out.println("Minivan - Big comfortable car");
 
-    }
-
-    @Override
-    public void printInfo() {
 
     }
 }

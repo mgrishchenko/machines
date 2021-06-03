@@ -31,10 +31,6 @@ public class Coupe extends Carbody {
     @Override
     public void ride() {
         System.out.println("Three doors car");
-    }
-
-    @Override
-    public void printInfo() {
 
     }
 }

@@ -39,10 +39,6 @@ public class Passenger implements Information {
     public void setType(){
         this.type = type;
 
-    }
-
-    @Override
-    public void printInfo() {
 
     }
 

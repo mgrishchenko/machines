@@ -1,22 +1,23 @@
 package com.solvd.types.drivers;
 
-public class Inexperienced extends DriversList{
+public class Inexperienced extends DriversList {
 
-    public Inexperienced() {
-    }
-
-    public Inexperienced(String name, String lastname){
-        super();
+    public Inexperienced(String name, String lastname, int years) {
         setName(name);
         setLastname(lastname);
+        setYears(years);
     }
 
+    @Override
+    public String toString() {
+        return ("Driver information:" + "\n"
+                + "Driver name: " + getName() + "\n"
+                + "Driver lastname: " + getLastname() + "\n"
+                + "Driver age: " + getYears() + "\n");
+    }
+
+    @Override
     public void ride() {
 
     }
-    public void printInfo(String str) {
-        System.out.println("Drivers without experience!"+ str);
-
-    }
 }
-
