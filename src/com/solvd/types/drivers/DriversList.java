@@ -6,10 +6,10 @@ public abstract class DriversList implements Information {
 
     private String name;
     private String lastname;
-    private  int years;
+    private int years;
 
 
-    public DriversList(String name, String lastname, int years){
+    public DriversList(String name, String lastname, int years) {
         this.name = name;
         this.lastname = lastname;
         this.years = years;
@@ -19,31 +19,38 @@ public abstract class DriversList implements Information {
 
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    public void setLastname(String lastname){
+
+    public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-    public String getLastname(){
+
+    public String getLastname() {
         return this.lastname;
     }
-    public void setYears(int years){
+
+    public void setYears(int years) {
         this.years = years;
     }
-    public int getYears(){
+
+    public int getYears() {
         return this.years;
     }
-    public void printInfo(){
-        System.out.println(getName());
-        System.out.println(getLastname());
-        System.out.println(getYears());
+
+    public String toString() {
+        return "Name: " + getName() + " LastName: " + getLastname() + " Years: " + getYears();
 
     }
 
+    @Override
+    public void ride() {
 
     }
+}
 

@@ -1,8 +1,18 @@
 package com.solvd.types;
 
-public class HyperCar extends Sport{
+public class HyperCar implements Sport {
+
+    String name = "MacLaren";
+
     @Override
-    public void driveFast() {
-        System.out.println("The most speedy cars");
+    public void printInfo() {
+        System.out.println("This is Hyper Car");
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+
     }
 }
+

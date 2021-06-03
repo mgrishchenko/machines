@@ -5,25 +5,20 @@ import com.solvd.types.drivers.DriversList;
 import com.solvd.types.drivers.Experienced;
 import com.solvd.types.drivers.Inexperienced;
 
+import java.util.Scanner;
+
 public class Executor {
+
 
     public static void main(String[] args) {
         Passenger car = new Passenger("Volkswagen", 30, "Polo");
         Passenger car1 = new Passenger(2005);
         car1.transportation();
-        car1.printInfo();
 
         String carName = car.getName();
         int carAge = car.getAge();
         String carType = car.getType();
         System.out.println("name: " + carName + " age- " + carAge + " type-" + carType);
-
-        Sport auto = new Sport("Ferrari");
-        auto.driveFast();
-        auto.printInfo();
-
-        int autoSpeed = auto.getSpeed();
-        System.out.println("speed:" + autoSpeed);
 
         Cabriolet Chevrolet = new Cabriolet(250, "Chevrolet", "New York");
         String ChevroletName = Chevrolet.getName();
@@ -45,28 +40,64 @@ public class Executor {
         int MazdaYear = Mazda.getYear();
         System.out.println("year: " + MazdaYear);
 
-        //Overloading and Override
 
         Experienced man1 = new Experienced("John", "Smith", 17);
-        man1.printInfo();
-        Inexperienced man2 = new Inexperienced();
-        man2.printInfo("Or with minimum driving experience");
+        String info = man1.toString();
+        System.out.println(info);
+
+        Inexperienced man2 = new Inexperienced("Bob", "Johnson", 28);
+        info = man2.toString();
+        System.out.println(info);
         Cabriolet cabriolet1 = new Cabriolet();
         cabriolet1.ride();
 
-        Sport superCar1 = new SuperCar();
-        Sport hyperCar = new HyperCar();
+        SuperCar superCar1 = new SuperCar();
+        superCar1.printInfo();
 
-        TestDrive testDrive = new TestDrive();
-        testDrive.testdrive(superCar1);
+        HyperCar hyperCar = new HyperCar();
+        hyperCar.printInfo();
 
+        Garage garage = new Garage();
+        garage.setSport(superCar1);
+
+        System.out.println(garage.getSport().getName());
+
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Choose your drive experience:" + "\n 0-1 - Inexperienced, \n 2-4 - Middle experience, \n 5-7 - Good experience, \n 8-10 - Excellent experience");
+
+        int years = in.nextInt();
+        switch (years) {
+            case 0:
+            case 1:
+                System.out.println("Inexperienced driver");
+                break;
+            case 2:
+            case 3:
+            case 4:
+                System.out.println("Middle experienced driver");
+                break;
+            case 5:
+            case 6:
+            case 7:
+                System.out.println("Good experienced driver");
+                break;
+            case 8:
+            case 9:
+            case 10:
+                System.out.println("Excellent experienced driver");
+                break;
+            default:
+                System.out.println("You can choose any car");
 
         }
+    }
+}
 
 
 
 
-            }
+
 
 
 
