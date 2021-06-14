@@ -2,6 +2,11 @@ package com.solvd.types;
 
 public class Passenger implements Information {
     public int year;
+
+    public Passenger(String s) {
+
+    }
+
     public void transportation(){
         System.out.println("People transportation");
     }

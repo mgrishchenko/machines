@@ -4,7 +4,9 @@ import com.solvd.types.*;
 import com.solvd.types.drivers.DriversList;
 import com.solvd.types.drivers.Experienced;
 import com.solvd.types.drivers.Inexperienced;
+import java.util.ArrayList;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Executor {
@@ -12,8 +14,6 @@ public class Executor {
 
     public static void main(String[] args) {
         Passenger car = new Passenger("Volkswagen", 30, "Polo");
-        Passenger car1 = new Passenger(2005);
-        car1.transportation();
 
         String carName = car.getName();
         int carAge = car.getAge();
@@ -62,6 +62,27 @@ public class Executor {
 
         System.out.println(garage.getSport().getName());
 
+        Experienced driver = new Experienced("John", "Gofman", 18);
+        Experienced driver1 = new Experienced("Bob", "Deelan", 12);
+        Experienced driver3 = new Experienced("Michael", "Johnson", 19);
+
+        DriversList driversList = new DriversList();
+        driversList.setExperienced(driver);
+        driversList.setExperienced(driver1);
+
+        for (Experienced experienced1: driversList.getExperiencedList())
+            System.out.println(experienced1.getName() + " " + experienced1.getLastname() + "," + experienced1.getYears());
+
+        Inexperienced driver2 = new Inexperienced("Alan","Crow",3);
+        Inexperienced driver5 = new Inexperienced("Steven", "Watson", 2);
+
+        DriversList nonExperienceDrivers = new DriversList();
+        nonExperienceDrivers.setInexperienced(driver2);
+        nonExperienceDrivers.setInexperienced(driver5);
+
+        for (Inexperienced inexperienced1: nonExperienceDrivers.getInexperiencedList())
+            System.out.println(inexperienced1.getName() + "," + inexperienced1.getYears());
+
 
         Scanner in = new Scanner(System.in);
         System.out.println("Choose your drive experience:" + "\n 0-1 - Inexperienced, \n 2-4 - Middle experience, \n 5-7 - Good experience, \n 8-10 - Excellent experience");
@@ -89,9 +110,11 @@ public class Executor {
                 break;
             default:
                 System.out.println("You can choose any car");
+                break;
+        }
 
         }
-    }
+
 }
 
 
