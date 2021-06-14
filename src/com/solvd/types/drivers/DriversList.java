@@ -2,21 +2,21 @@ package com.solvd.types.drivers;
 
 import com.solvd.types.Information;
 
-public abstract class DriversList implements Information {
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class DriversList implements Information {
 
     private String name;
     private String lastname;
     private int years;
+    private List<Experienced> experiencedList;
+    private List<Inexperienced> inexperiencedList;
 
-
-    public DriversList(String name, String lastname, int years) {
-        this.name = name;
-        this.lastname = lastname;
-        this.years = years;
-    }
-
-    public DriversList() {
-
+    public DriversList(){
+        experiencedList = new ArrayList<>();
+        inexperiencedList = new LinkedList<>();
     }
 
     public void setName(String name) {
@@ -26,6 +26,7 @@ public abstract class DriversList implements Information {
     public String getName() {
         return this.name;
     }
+
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
@@ -41,6 +42,19 @@ public abstract class DriversList implements Information {
 
     public int getYears() {
         return this.years;
+    }
+
+    public void setExperienced(Experienced experienced){
+        experiencedList.add(experienced);
+    }
+    public void setInexperienced(Inexperienced inexperienced){
+        inexperiencedList.add(inexperienced);
+    }
+    public List<Experienced> getExperiencedList(){
+        return experiencedList;
+    }
+    public List<Inexperienced> getInexperiencedList(){
+        return inexperiencedList;
     }
 
     public String toString() {
