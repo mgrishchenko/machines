@@ -7,6 +7,10 @@ public class Inexperienced extends DriversList {
         setLastname(lastname);
         setYears(years);
     }
+    public Inexperienced (String name,String lastname, int years, String driversList){
+        super(name,lastname,years);
+    }
+
 
     @Override
     public String toString() {

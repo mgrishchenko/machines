@@ -1,5 +1,7 @@
 package com.solvd.types.drivers;
 
+import com.solvd.body.Sedan;
+
 public class Experienced extends DriversList {
 
     public Experienced(String name, String lastname, int years) {
@@ -18,5 +20,8 @@ public class Experienced extends DriversList {
     @Override
     public void ride() {
 
+    }
+
+    public void setSedan(Sedan sedan) {
     }
 }

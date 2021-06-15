@@ -1,16 +1,9 @@
 package com.solvd.body;
 
 public class Sedan extends Carbody {
-    private int year;
 
-    public Sedan(int year) {
-        this.year = year;
-    }
-    public int getYear() {
-        return year;
-    }
-    public void setYear(){
-        this.year = year;
+    public Sedan(String name, String driver, int year){
+        super(name, driver, year);
     }
 
     public Sedan(){
@@ -20,6 +13,11 @@ public class Sedan extends Carbody {
     public void ride() {
         System.out.println("Speed riding");
 
+
+    }
+
+    @Override
+    public void removeCarBody() {
 
     }
 }

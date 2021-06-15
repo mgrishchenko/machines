@@ -38,13 +38,16 @@ public class Cabriolet extends Carbody {
 
     }
 
-    public Cabriolet() {
+    public Cabriolet(String opel, String jack) {
+
+    }
+    public Cabriolet(String name, String driver, int year){
+        super(name, driver, year);
 
     }
 
     @Override
-    public void ride() {
-        System.out.println("Car with open roof");
+    public void removeCarBody() {
 
     }
 }
