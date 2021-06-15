@@ -33,5 +33,10 @@ public class Coupe extends Carbody {
         System.out.println("Three doors car");
 
     }
+
+    @Override
+    public void removeCarBody() {
+
+    }
 }
 

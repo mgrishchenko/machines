@@ -51,6 +51,11 @@ public class Passenger implements Information {
     public void ride() {
 
     }
+
+    @Override
+    public void removeCarBody() {
+
+    }
 }
 
 

@@ -1,8 +1,11 @@
 package com.solvd.types;
 
-public class HyperCar implements Sport {
+public abstract class HyperCar implements Sport {
 
     String name = "MacLaren";
+
+    public HyperCar(String name, String driver, int year){
+    }
 
     @Override
     public void printInfo() {
@@ -13,6 +16,11 @@ public class HyperCar implements Sport {
     public String getName() {
         return this.name;
 
+    }
+
+    @Override
+    public boolean getSpeed() {
+        return false;
     }
 }
 

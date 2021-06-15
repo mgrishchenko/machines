@@ -1,5 +1,6 @@
 package com.solvd.types.drivers;
 
+import com.solvd.body.Sedan;
 import com.solvd.types.Information;
 
 import java.util.ArrayList;
@@ -17,6 +18,11 @@ public class DriversList implements Information {
     public DriversList(){
         experiencedList = new ArrayList<>();
         inexperiencedList = new LinkedList<>();
+
+    }
+
+    public DriversList(String name, String lastname, int years) {
+
     }
 
     public void setName(String name) {
@@ -65,6 +71,14 @@ public class DriversList implements Information {
     @Override
     public void ride() {
 
+    }
+
+    @Override
+    public void removeCarBody() {
+
+    }
+
+    public void removeCarBody(Sedan sedan) {
     }
 }
 
