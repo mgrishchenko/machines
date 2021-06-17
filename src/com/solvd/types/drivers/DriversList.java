@@ -1,10 +1,8 @@
 package com.solvd.types.drivers;
 
-import com.solvd.body.Sedan;
 import com.solvd.types.Information;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class DriversList implements Information {
@@ -12,12 +10,20 @@ public class DriversList implements Information {
     private String name;
     private String lastname;
     private int years;
-    private List<Experienced> experiencedList;
-    private List<Inexperienced> inexperiencedList;
+    private List<String> experiencedList;
 
-    public DriversList(){
-        experiencedList = new ArrayList<>();
-        inexperiencedList = new LinkedList<>();
+    public DriversList() {
+
+    }
+
+
+    public void AddValues() {
+        experiencedList = new ArrayList<String>();
+        experiencedList.add("Maria");
+        experiencedList.add("John");
+        experiencedList.add("Alan");
+        experiencedList.add("Scott");
+        experiencedList.add("Vasya");
 
     }
 
@@ -50,22 +56,11 @@ public class DriversList implements Information {
         return this.years;
     }
 
-    public void setExperienced(Experienced experienced){
+    public void setExperienced(String experienced){
         experiencedList.add(experienced);
     }
-    public void setInexperienced(Inexperienced inexperienced){
-        inexperiencedList.add(inexperienced);
-    }
-    public List<Experienced> getExperiencedList(){
+    public List<String> getExperiencedList(){
         return experiencedList;
-    }
-    public List<Inexperienced> getInexperiencedList(){
-        return inexperiencedList;
-    }
-
-    public String toString() {
-        return "Name: " + getName() + " LastName: " + getLastname() + " Years: " + getYears();
-
     }
 
     @Override
@@ -77,8 +72,6 @@ public class DriversList implements Information {
     public void removeCarBody() {
 
     }
-
-    public void removeCarBody(Sedan sedan) {
-    }
 }
+
 
