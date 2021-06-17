@@ -3,6 +3,9 @@ package com.solvd.types.drivers;
 public class Inexperienced extends DriversList {
 
     public Inexperienced(String name, String lastname, int years) {
+        super();
+
+
         setName(name);
         setLastname(lastname);
         setYears(years);
