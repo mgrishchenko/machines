@@ -16,9 +16,6 @@ public class Menu {
     public void showMenu() {
         try {
             DriverException.getDriverException(17);
-        } catch (DriverException e) {
-            System.out.println(e.getMessage());
-            System.out.println(e.getAge());
 
             Scanner in = new Scanner(System.in);
 
@@ -208,6 +205,8 @@ public class Menu {
             }
 
 
+        } catch (DriverException e) {
+            System.out.println(e.getMessage());
+            System.out.println(e.getAge());
         }
-    }
-}
+    }}
