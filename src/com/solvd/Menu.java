@@ -2,6 +2,7 @@ package com.solvd;
 
 import com.solvd.body.*;
 import com.solvd.exceptions.DriverException;
+import com.solvd.utils.Authentification;
 
 import java.util.Scanner;
 
@@ -9,15 +10,23 @@ public class Menu {
 
 
     public Menu() {
-
     }
 
-
     public void showMenu() {
-        try {
-            DriverException.getDriverException(17);
+        Authentification auth =new Authentification();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your email: ");
+        String email = in.nextLine();
+        System.out.println("Enter your password: ");
+        String password = in.nextLine();
+        auth.setAuthentification("src/com/solvd/utils/properties", "email", "5656");
 
-            Scanner in = new Scanner(System.in);
+
+
+
+
+        try {
+            DriverException.getDriverException(19);
 
             System.out.println("Choose your drive experience:" + "\n" +
                     " 1: 0-2 - bad experience, \n" +
