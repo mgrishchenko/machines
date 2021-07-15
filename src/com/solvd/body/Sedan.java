@@ -14,8 +14,8 @@ public class Sedan extends Carbody {
         }
     }
            public List <String> addValues() {
-               List<String> SedanList = new ArrayList<String>();
-               SedanList.add("Mazda");
+               List<String> SedanList = new ArrayList<>();
+               SedanList.add(new String("Mazda"));
                SedanList.add("Honda");
                SedanList.add("BMW");
                SedanList.add("Citroen");
