@@ -9,15 +9,10 @@ public class Executor {
         menu1.showMenu();
 
 
-        }
+    Menu menu1 = new Menu();
+        menu1.showMenu();
 
 }
-
-
-
-
-
-
 
 
 
